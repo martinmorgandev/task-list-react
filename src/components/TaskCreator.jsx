@@ -12,14 +12,19 @@ function TaskCreator({createNewTask}) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="my-2 row">
+      <div className="col-8">
       <input
         type="text"
         placeholder="enter a new task2"
         value={newTaskName}
         onChange={(e) => setNewTaskName(e.target.value)}
+        className="form-control"
       ></input>
-      <button type="submit">Save task</button>
+      </div>
+      <div className="col-4">
+        <button className="btn btn-primary btn-sm" type="submit">Save task</button>
+      </div>
     </form>
   );
 }
